@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <input type="text" id="value1">
+    <input type="text" id="value2">
+    <button onclick="ADD()">ADD</button>
+    <button onclick="SUB()">SUB</button>
+    <button onclick="MUL()">MUL</button>
+    <button onclick="DIV()">DIV</button>
+
+    <script>
+        function ADD(){
+            let a = parseInt(document.getElementById('value1').value)
+            let b = parseInt(document.getElementById('value2').value)
+            let c=a+b
+            document.getElementById('result').innerHTML=c
+        }
+        function SUB(){
+            let a = parseInt(document.getElementById('value1').value)
+            let b = parseInt(document.getElementById('value2').value)
+            let c=a-b
+            document.getElementById('result').innerHTML=c
+        }
+        
+        function MUL(){
+            let a = parseInt(document.getElementById('value1').value)
+            let b = parseInt(document.getElementById('value2').value)
+            let c=a*b
+            document.getElementById('result').innerHTML=c
+        }
+        
+        function DIV(){
+            let a = parseInt(document.getElementById('value1').value)
+            let b = parseInt(document.getElementById('value2').value)
+            let c=a/b
+            document.getElementById('result').innerHTML=c
+        }
+        
+    </script>
+</body>
+</html>
