@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Area Calculator</h1>
+        
+        <div class="input-group">
+            <h2>Rectangle</h2>
+            <label for="rect-length">Length:</label>
+            <input type="number" id="rect-length">
+            <label for="rect-width">Width:</label>
+            <input type="number" id="rect-width" >
+            <button onclick="areaRect()">Calculate Area</button>
+            <p id="rectarea"></p>
+        </div>
+        
+        <div class="input-group">
+            <h2>Triangle</h2>
+            <label for="tri-base">Base:</label>
+            <input type="number" id="tri-base">
+            <label for="tri-height">Height:</label>
+            <input type="number" id="tri-height">
+            <button onclick="areaTri()">Calculate Area</button>
+            <p id="triarea"></p>
+        </div>
+        
+        <div class="input-group">
+            <h2>Circle</h2>
+            <label for="circle-radius">Radius:</label>
+            <input type="number" id="circle-radius">
+            <button onclick="areaCir()">Calculate Area</button>
+            <p id="circlearea"></p>
+        </div>
+    </div>
+    <script>
+    function areaRect() {
+        const length = document.getElementById('rect-length').value;
+        const width = document.getElementById('rect-width').value;
+        const area = length * width;
+        document.getElementById('rectarea').innerText = `Area: ${area} square units`;
+    }
+
+    function areaTri() {
+        const base = document.getElementById('tri-base').value;
+        const height = document.getElementById('tri-height').value;
+        const area = 0.5 * base * height;
+        document.getElementById('triarea').innerText = `Area: ${area} square units`;
+    }
+
+    function areaCir() {
+        const radius = document.getElementById('circle-radius').value;
+        const area = Math.PI * radius * radius;
+        document.getElementById('circlearea').innerText = `Area: ${area} square units`;
+    }
+
+    </script>
+</body>
+</html>

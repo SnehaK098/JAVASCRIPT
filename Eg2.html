@@ -2,46 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
 </head>
 <body>
-    <h2 id="result"></h2>
-    <input type="text" id="value1">
-    <input type="text" id="value2">
-    <button onclick="ADD()">ADD</button>
-    <button onclick="SUB()">SUB</button>
-    <button onclick="MUL()">MUL</button>
-    <button onclick="DIV()">DIV</button>
-
     <script>
-        function ADD(){
-            let a = parseInt(document.getElementById('value1').value)
-            let b = parseInt(document.getElementById('value2').value)
-            let c=a+b
-            document.getElementById('result').innerHTML=c
+        let n = 5;
+        let string = "";
+        for (let i = 1; i <= n; i++) {
+        // printing spaces
+        for (let j = 0; j < n - i; j++) {
+            string += " ";
         }
-        function SUB(){
-            let a = parseInt(document.getElementById('value1').value)
-            let b = parseInt(document.getElementById('value2').value)
-            let c=a-b
-            document.getElementById('result').innerHTML=c
+        // printing star
+        for (let k = 0; k < i; k++) {
+            string += "*";
         }
-        
-        function MUL(){
-            let a = parseInt(document.getElementById('value1').value)
-            let b = parseInt(document.getElementById('value2').value)
-            let c=a*b
-            document.getElementById('result').innerHTML=c
+        string += "\n";
         }
-        
-        function DIV(){
-            let a = parseInt(document.getElementById('value1').value)
-            let b = parseInt(document.getElementById('value2').value)
-            let c=a/b
-            document.getElementById('result').innerHTML=c
-        }
-        
+        console.log(string);
     </script>
 </body>
 </html>

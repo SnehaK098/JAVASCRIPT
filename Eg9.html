@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="details"></p>
+    <script>
+        const person={
+            name:'SNEHA K',
+            age:21,
+            course:'MERN'
+        }
+        let data = Object.keys(person)
+        console.log(data)
+        let length = Object.keys(person).length
+        console.log(length)
+        var shop = [ 
+    {
+        fruit: 'APPLE',
+        color: 'RED',
+        status: true
+    },
+    {
+        fruit: 'ORANGE',
+        color: 'ORANGE',
+        status: true
+       
+    },
+    {
+        fruit: 'PINAPPLE',
+        color: 'RED',
+        status: false
+    }];
+    let details = Object.values(shop)
+    console.log(details)
+    for (items  of details)
+    console.log(items.status)
+
+    var calc = {
+    add: (a, b)=> {
+        return a + b;
+    },
+    subtract: (a, b) => {
+        return a - b;
+    },
+    multiply: (a, b) => {
+        return a * b;
+    },
+    divide: (a, b) => {
+        if (b !== 0) {
+            return a / b;
+        } else {
+            return "Division by zero";
+        }
+    }
+};
+
+console.log(calc.add(2,4))
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #num1 {
+        border-radius: 20px;
+        padding: 10px;
+    }
+    #num2 {
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .calc {
+        border: 2px solid blue;
+        border-radius: 20px;
+        width:200px;
+        padding: 50px;
+        margin-left: 500px;
+        margin-top: 100px;
+    }
+    .top {
+        padding: 10px;
+        margin-left: 20px;
+    }
+    .bottom {
+        padding: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div class="calc">
+    <h2 id="heading"> Result</h2>
+    <input type="text" id="num1"><br><br>
+    <input type="text" id="num2"><br><br>
+    <button onclick="view('add')" class="btn top add">Add</button>
+    <button onclick="view('sub')" class="btn top sub">Sub</button><br>
+    <button onclick="view('mul')" class="btn bottom mul">Mulitply</button>
+    <button onclick="view('div')" class="btn bottom div">Divide</button>
+    </div>
+    <script>
+        let view=(x)=>{
+            let a=parseFloat(document.getElementById('num1').value)
+            let b=parseFloat(document.getElementById('num2').value)
+            let c=''
+            if(!a || !b){
+                alert('Please enter a value')
+            }
+            else{
+
+                switch(x){
+                    case 'add':
+                        c=a+b
+                        break
+                    case 'sub':
+                        c=a-b
+                        break
+                    case 'mul':
+                        c=a*b
+                        break
+                    case 'div':
+                        c=a/b
+                        break
+                }
+                // if(x=='add')
+                // {
+                //     c=a+b
+                // }
+                // else if(x=='sub')
+                // {
+                //     c=a-b
+                // }
+                // else if(x=='mul')
+                // {
+                //     c=a*b
+                // }
+                // else if(x=='div')
+                // {
+                //     c=a/b
+                // }
+            }
+            document.getElementById('heading').innerHTML = c
+        }
+    
+    </script>
+</body>
+</html>
